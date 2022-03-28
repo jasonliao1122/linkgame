@@ -6,6 +6,7 @@ import java.util.List;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 /**********************************************
  *数据库 表操作
@@ -48,7 +49,8 @@ public abstract class Tabel {
 	                   " SALARY         REAL"+"
 	 */
 	public void Create(String iTabel)
-	{	
+	{
+		Log.d("jason","Create:"+iTabel);
 		if(IsInDB()==true)
 			return;
 		
@@ -60,9 +62,12 @@ public abstract class Tabel {
 	                   "("+iTabel+")";
 	       c.execSQL(sql);
 	       c.close();
+
+				Log.d("jason","Create:"+iTabel+" OK");
 			}
 	       catch(Exception e)
 			{
+				Log.d("jason","Create:"+iTabel+" err:"+e.toString());
 			}
 		
 			
@@ -266,7 +271,7 @@ public abstract class Tabel {
 			String sql;
 			sql="select count(*) totalCount from sqlite_master where type ='table' and name='"+mName+"' ;";
 			
-			//Log.d("sql="+sql);
+			Log.d("jason","sql="+sql);
 			Cursor rs=c.rawQuery(sql,null);
 			while ( rs.moveToNext() ) {
 				ret=rs.getInt(rs.getColumnIndex("totalCount"));
@@ -275,7 +280,7 @@ public abstract class Tabel {
 	       c.close();
 		} catch (Exception e) {
 			e.printStackTrace();
-			//Log.d("### Tabel IsInDB err:"+e.toString());
+			Log.d("jason","### Tabel IsInDB err:"+e.toString());
 		}
 	      
 		}

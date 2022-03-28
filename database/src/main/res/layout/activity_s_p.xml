@@ -17,19 +17,11 @@
         android:text="" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:padding="5dp"
-        android:gravity="center"
-        android:orientation="horizontal">
+        style="@style/style1">
 
         <Button
+            style="@style/but_style1"
             android:onClick="ReadSP"
-            android:id="@+id/button"
-            android:layout_width="150dp"
-            android:textSize="20dp"
-            android:gravity="center"
-            android:layout_height="match_parent"
             android:text="读取" />
     </LinearLayout>
 

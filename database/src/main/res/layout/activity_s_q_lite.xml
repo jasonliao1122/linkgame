@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SQLiteActivity">
+
+    <include layout="@layout/layout_title" />
+
+    <LinearLayout
+        style="@style/style1"
+        >
+
+        <EditText
+            android:id="@+id/searchstr"
+            style="@style/edit_style1"
+            android:layout_weight="8"
+            android:hint="输入名字"
+            android:textColorHint="#C3C1C1"
+            android:text="" />
+
+        <Button
+            style="@style/but_style1"
+            android:layout_weight="2"
+            android:text="搜索" />
+    </LinearLayout>
+    <LinearLayout
+        style="@style/style1"
+        >
+
+        <Button
+            android:onClick="AddStudant"
+            style="@style/but_style1"
+            android:layout_weight="1"
+            android:text="新增" />
+
+        <Button
+            style="@style/but_style1"
+            android:layout_weight="1"
+            android:text="全部" />
+
+        <Button
+            style="@style/but_style1"
+            android:layout_weight="1"
+            android:text="全部删除" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/style1"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <View style="@style/view_style2" />
+        <LinearLayout
+            style="@style/style2"
+            android:background="#D5D2D2"
+            >
+            <View
+                style="@style/view_style1"
+                />
+            <TextView
+                android:id="@+id/textView"
+                style="@style/text_style1"
+                android:layout_weight="1"
+                android:text="学号" />
+            <View
+                style="@style/view_style1"
+                />
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/text_style1"
+                android:layout_weight="1"
+                android:text="姓名" />
+            <View
+                style="@style/view_style1"
+                />
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/text_style1"
+                android:layout_weight="1"
+                android:text="成绩" />
+
+            <View style="@style/view_style1" />
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="#D5D2D2"
+                />
+            <View style="@style/view_style1" />
+        </LinearLayout>
+
+        <View style="@style/view_style2" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffffff"
+        />
+    </LinearLayout>
+</LinearLayout>

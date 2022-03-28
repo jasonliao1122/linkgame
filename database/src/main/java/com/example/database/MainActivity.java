@@ -103,7 +103,7 @@ public class MainActivity extends Activity {
             new data("内部文件存储",R.drawable.n1,FileActivity.class),
             new data("外部文件存储",R.drawable.n2,FileActivity.class),
             new data("SharedPreferences存储",R.drawable.n3,SPActivity.class),
-            new data("SQLite数据库存储",R.drawable.n4,MainActivity.class),
+            new data("SQLite数据库存储",R.drawable.n4,SQLiteActivity.class),
     };
     class data{
         public String mName;

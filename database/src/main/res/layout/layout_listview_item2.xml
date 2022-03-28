@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+    <LinearLayout style="@style/style2">
+        <View
+            style="@style/view_style1"
+            />
+        <TextView
+            android:id="@+id/numbel"
+            style="@style/text_style1"
+            android:layout_weight="1"
+            android:text="学号" />
+        <View
+            style="@style/view_style1"
+            />
+        <TextView
+            android:id="@+id/name"
+            style="@style/text_style1"
+            android:layout_weight="1"
+            android:text="姓名" />
+        <View
+            style="@style/view_style1"
+            />
+        <TextView
+            android:id="@+id/cj"
+            style="@style/text_style1"
+            android:layout_weight="1"
+            android:text="成绩" />
+        <View style="@style/view_style1" />
+
+        <ImageView
+            style="@style/text_style1"
+            android:id="@+id/del"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/del"
+            />
+        <View style="@style/view_style1" />
+
+    </LinearLayout>
+
+    <view style="@style/view_style2" />
+</LinearLayout>
