@@ -18,10 +18,13 @@ public class StudantTabel extends Tabel {
 		super(iC, iName);
 
 		//姓名 文本  学号 int  成绩 int
+		/***
 		super.Create("NAME           TEXT    NOT NULL,"
 				+ "NUMBEL           INT    NOT NULL,"
 				+ "CJ           INT    NOT NULL,"
 				);
+		 **/
+		super.Create("_id integer primary key autoincrement,NAME text,NUMBEL integer,CJ integer");
 	}
 
 	/******************************************
@@ -31,7 +34,7 @@ public class StudantTabel extends Tabel {
 	{
 		//姓名 学号 成绩
 		public String NAME;
-		public int NUMBEL,CJ;
+		public int NUMBEL,CJ,_id;
 		
 		/*******************************************
 		 *
@@ -60,6 +63,7 @@ public class StudantTabel extends Tabel {
 	public String SetData(TData iDate) {
 		// 设置数据
 		String ret="VALUES (";
+		//ret+="'"+((Data)iDate)._id+"'"+",";
 		ret+="'"+((Data)iDate).NAME+"'"+",";
 		ret+="'"+((Data)iDate).NUMBEL+"'"+",";
 		ret+="'"+((Data)iDate).CJ+"'";
@@ -72,6 +76,7 @@ public class StudantTabel extends Tabel {
 	public void GetData(List<TData> iData, JResultSet rs) {
 		// 获得数据
 		Data iDate=new Data();
+		iDate._id = rs.getInt("_id");
 		iDate.CJ = rs.getInt("CJ");
 		iDate.NUMBEL = rs.getInt("NUMBEL");
 		iDate.NAME = rs.getString("NAME");
@@ -82,6 +87,7 @@ public class StudantTabel extends Tabel {
 	public String SetUpDate(TData iDate) {
 		// 更新数据
 		String ret="set";
+		ret+=" _id = "+((Data)iDate)._id+",";
 		ret+=" NUMBEL = "+((Data)iDate).NUMBEL+",";
 		ret+=" NAME = "+"'"+((Data)iDate).NAME+"'"+",";
 		ret+=" CJ = "+((Data)iDate).CJ;

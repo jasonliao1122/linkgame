@@ -31,6 +31,7 @@ public class MainActivity extends Activity {
 
         //动态提示权限
         JwFile.Permissions(this,1);
+
     }
 
     @Override

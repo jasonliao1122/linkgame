@@ -50,7 +50,7 @@ public abstract class Tabel {
 	 */
 	public void Create(String iTabel)
 	{
-		Log.d("jason","Create:"+iTabel);
+		//Log.d("jason","Create:"+iTabel);
 		if(IsInDB()==true)
 			return;
 		
@@ -58,10 +58,10 @@ public abstract class Tabel {
 		if(c!=null)
 		{
 			try{
-		   String sql = "CREATE TABLE "+mName+" " +
-	                   "("+iTabel+")";
-	       c.execSQL(sql);
-	       c.close();
+				String sql = "CREATE TABLE "+mName+" " +
+						"("+iTabel+")";
+	       		c.execSQL(sql);
+	       		c.close();
 
 				Log.d("jason","Create:"+iTabel+" OK");
 			}
@@ -195,7 +195,7 @@ public abstract class Tabel {
 	
 	/******************************************
 	 * 删除表中数据
-	 * @param sqltype   条件 如 ID=1
+	 * @param sqltype   条件 如 ID=1 null 删除所有数据
 	 */
 	public void Delete(String sqltype)
 	{
@@ -203,8 +203,11 @@ public abstract class Tabel {
 		if(c!=null)
 		{
 		  try {
-
-			String sql = "DELETE from "+mName+
+		  	String sql;
+		  	if(sqltype==null)
+				sql = "DELETE from "+mName+";";
+		  		else
+			sql = "DELETE from "+mName+
 					" where "+sqltype+";";
 			//Log.d("sql:"+sql);
 		    c.execSQL(sql);

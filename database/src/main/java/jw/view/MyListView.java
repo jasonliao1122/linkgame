@@ -22,8 +22,10 @@ public abstract class MyListView {
         mContext=iContext;
         mListView=iListView;
         List<Map<String,Object>> data=new ArrayList<Map<String,Object>>();
-        for(int i=0;i<iData.length;i++)
-            data.add(AddItemData(iData[i]));
+        if(iData!=null) {
+            for (int i = 0; i < iData.length; i++)
+                data.add(AddItemData(iData[i]));
+        }
         mListView.setAdapter(GetSimpleAdapter(data));
 
         /*************************************************

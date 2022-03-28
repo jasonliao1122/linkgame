@@ -5,7 +5,6 @@ import android.content.Context;
 import java.util.ArrayList;
 import java.util.List;
 
-import jw.database.SQTabel;
 import jw.database.Sqlite;
 import jw.database.Tabel;
 

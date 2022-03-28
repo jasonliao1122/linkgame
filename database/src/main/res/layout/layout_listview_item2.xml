@@ -8,13 +8,14 @@
             style="@style/view_style1"
             />
         <TextView
-            android:id="@+id/numbel"
+            android:id="@+id/id"
             style="@style/text_style1"
             android:layout_weight="1"
-            android:text="学号" />
+            android:text="序号" />
         <View
             style="@style/view_style1"
             />
+
         <TextView
             android:id="@+id/name"
             style="@style/text_style1"
@@ -41,5 +42,5 @@
 
     </LinearLayout>
 
-    <view style="@style/view_style2" />
+    <View style="@style/view_style2" />
 </LinearLayout>
